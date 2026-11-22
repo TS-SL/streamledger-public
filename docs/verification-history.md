@@ -17,7 +17,7 @@ stated). ESTIMATED = reasoned, not measured.
 | same, before reconciliation existed | 100 passed in 342 s | |
 | Windows without Kafka/PostgreSQL | 44 passed, 2 skipped (module-level skips: no psycopg) | |
 
-No CI run of any revision has been observed. See the README for what CI checks now.
+CI on GitHub-hosted runners (ubuntu-24.04, Python 3.12.16, Temurin 17.0.21, real Kafka 3.9.1 and PostgreSQL 17.6 service containers), commit `36b6c90`, run [45017132640](https://github.com/TS-SL/streamledger-public/actions/runs/45017132640): `stack` job 131 collected, 131 passed, 0 skipped, 2 `stack_kill` tests deselected, 226.9 s; `unit` job passed. This is the only CI result for this code; the retained numbers below were not re-measured by it.
 
 ## Measurements behind the README table (retained)
 

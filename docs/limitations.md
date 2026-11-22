@@ -14,7 +14,7 @@ What this project does **not** show. Each item is a deliberate scope boundary or
 - **Same origin.** The reference, processor and Spark rebuild were all written within this project, from the same written contract. Their independence is structural (different algorithms and no imports), not organisational. No independent human review has taken place.
 - **Mutation checks are hand-picked** (≈40 mutants in total), not a systematic mutation-testing tool.
 - **Container-kill tests are opt-in and local only.** CI cannot control its service containers.
-- **CI:** the workflow (`.github/workflows/ci.yml`) has not been observed passing on GitHub's runners for this release. A green run counts only if its report shows the stack tests executed and none skipped.
+- **CI** covers everything except the container-kill tests, which need `docker compose` control of the services and run locally only. The observed run is recorded in [verification-history.md](verification-history.md).
 - **Reconciliation proves consistency up to the database's committed progress**, not that the consumer has caught up, and a database must project a single topic. See consistency-contract.md section 8.
 
 ## Performance

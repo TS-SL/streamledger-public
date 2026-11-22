@@ -135,8 +135,11 @@ loopback-only container.
 `stack` runs every test except the container kills against real Kafka, PostgreSQL,
 Parquet and Spark in one job, after a readiness check. It records the collected and
 executed test ids and fails on any skip, on any collected test that did not run, or if
-the named headline tests did not pass. No run of this workflow has been observed for
-this release.
+the named headline tests did not pass. Observed result for commit `36b6c90` (the first
+public commit), run
+[45017132640](https://github.com/TS-SL/streamledger-public/actions/runs/45017132640):
+`unit` passed; `stack` collected 131 tests and executed 131, 131 passed, 0 skipped,
+2 container-kill tests deselected by design.
 
 ## Results
 
