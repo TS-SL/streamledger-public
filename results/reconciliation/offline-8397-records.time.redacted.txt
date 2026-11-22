@@ -1,0 +1,3 @@
+# public copy: run date redacted; measured values unchanged
+# /usr/bin/time -f 'compare wall=%es maxrss=%MKB' python -m streamledger.analytics.reconcile compare --topic reconcile-m5 ... (stack stopped), [date redacted]
+compare wall=30.15s maxrss=217884KB

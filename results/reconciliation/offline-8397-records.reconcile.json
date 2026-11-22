@@ -1,0 +1,36 @@
+{
+ "classified": {
+  "reference_vs_db": {},
+  "spark_vs_db": {},
+  "spark_vs_reference": {}
+ },
+ "counts": {
+  "reference_vs_db": 0,
+  "spark_vs_db": 0,
+  "spark_vs_reference": 0
+ },
+ "cutoff": {
+  "0": 2788,
+  "1": 2777,
+  "2": 2832
+ },
+ "examples": {
+  "reference_vs_db": [],
+  "spark_vs_db": [],
+  "spark_vs_reference": []
+ },
+ "match": true,
+ "records": 8397,
+ "seconds": {
+  "reference": 1.308,
+  "spark_reconstruct": 20.933,
+  "spark_session_start": 5.571
+ },
+ "summary": {
+  "conflicts": 68,
+  "orders": 3000,
+  "positions": 8397,
+  "unresolved": 92
+ },
+ "topic": "reconcile-m5"
+}

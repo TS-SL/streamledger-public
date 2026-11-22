@@ -1,0 +1,876 @@
+{
+ "redaction": "Public copy. Wall-clock start time removed; elapsed time from the start of run 1 kept so the run order is visible. All measured values are unchanged.",
+ "sequence": 2,
+ "started": "[date redacted]",
+ "started_elapsed_from_run_1_s": 448,
+ "orders": 3000,
+ "host": {
+  "machine": "aarch64",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "cpus_visible": 12,
+  "mem_total_kb": 7913464,
+  "python": "3.12.3",
+  "docker": "29.1.3",
+  "kafka_image": "apache/kafka:3.9.1",
+  "postgres_image": "postgres:17.6-alpine",
+  "limits": {
+   "kafka": "1 GiB / 2 CPU, heap 256-512 MiB",
+   "postgres": "512 MiB / 2 CPU, shared_buffers 128MB"
+  },
+  "note": "WSL2 on Windows 11 ARM64 (Snapdragon X Elite); host had ~0.5 GB free RAM at audit time"
+ },
+ "replay": {
+  "first_pass": {
+   "consumers": 1,
+   "topic_records": 8465,
+   "processed": 8465,
+   "wall_s": 101.575,
+   "apply_rate_rps": 83.3,
+   "outcomes": {
+    "APPLIED": 7046,
+    "DUPLICATE": 404,
+    "INVALID": 83,
+    "REJECTED": 342,
+    "PENDING": 513,
+    "CONFLICT": 77
+   },
+   "duplicate_rate": 0.0568,
+   "txn_ms": {
+    "p50": 10.699,
+    "p95": 20.681,
+    "p99": 27.99,
+    "max": 102.761,
+    "mean": 11.819
+   },
+   "retries": 0,
+   "kafka_commit_failures": 0,
+   "stopped": [
+    "settled"
+   ],
+   "max_lag": 8465,
+   "max_pending": 105,
+   "lock_wait_samples": 0,
+   "samples": 203,
+   "deadlocks": 0
+  },
+  "replay_pass": {
+   "consumers": 1,
+   "topic_records": 16930,
+   "processed": 8465,
+   "wall_s": 65.226,
+   "apply_rate_rps": 129.8,
+   "outcomes": {
+    "DUPLICATE": 8305,
+    "CONFLICT": 77,
+    "INVALID": 83
+   },
+   "duplicate_rate": 0.9902,
+   "txn_ms": {
+    "p50": 6.798,
+    "p95": 12.527,
+    "p99": 16.084,
+    "max": 121.304,
+    "mean": 7.532
+   },
+   "retries": 0,
+   "kafka_commit_failures": 0,
+   "stopped": [
+    "settled"
+   ],
+   "max_lag": 8465,
+   "max_pending": 104,
+   "lock_wait_samples": 0,
+   "samples": 130,
+   "deadlocks": 0,
+   "lag_timeline": [
+    {
+     "t": 0.0,
+     "lag": 8465,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 0.5,
+     "lag": 8408,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 1.01,
+     "lag": 8329,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 1.51,
+     "lag": 8241,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 2.01,
+     "lag": 8151,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 2.51,
+     "lag": 8060,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 3.01,
+     "lag": 7997,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 3.51,
+     "lag": 7924,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 4.02,
+     "lag": 7856,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 4.52,
+     "lag": 7781,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 5.02,
+     "lag": 7696,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 5.52,
+     "lag": 7614,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 6.02,
+     "lag": 7543,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 6.52,
+     "lag": 7486,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 7.03,
+     "lag": 7416,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 7.53,
+     "lag": 7326,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 8.03,
+     "lag": 7263,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 8.53,
+     "lag": 7168,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 9.03,
+     "lag": 7082,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 9.54,
+     "lag": 6993,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 10.04,
+     "lag": 6903,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 10.54,
+     "lag": 6833,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 11.04,
+     "lag": 6763,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 11.55,
+     "lag": 6697,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 12.05,
+     "lag": 6637,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 12.55,
+     "lag": 6572,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 13.06,
+     "lag": 6507,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 13.56,
+     "lag": 6451,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 14.06,
+     "lag": 6380,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 14.57,
+     "lag": 6309,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 15.07,
+     "lag": 6236,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 15.57,
+     "lag": 6160,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 16.07,
+     "lag": 6065,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 16.57,
+     "lag": 5987,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 17.08,
+     "lag": 5914,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 17.58,
+     "lag": 5843,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 18.08,
+     "lag": 5772,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 18.58,
+     "lag": 5711,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 19.08,
+     "lag": 5633,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 19.58,
+     "lag": 5565,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 20.09,
+     "lag": 5498,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 20.59,
+     "lag": 5433,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 21.09,
+     "lag": 5371,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 21.59,
+     "lag": 5306,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 22.09,
+     "lag": 5242,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 22.6,
+     "lag": 5151,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 23.1,
+     "lag": 5053,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 23.6,
+     "lag": 4966,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 24.1,
+     "lag": 4892,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 24.6,
+     "lag": 4816,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 25.11,
+     "lag": 4747,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 25.61,
+     "lag": 4667,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 26.11,
+     "lag": 4597,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 26.61,
+     "lag": 4531,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 27.11,
+     "lag": 4473,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 27.61,
+     "lag": 4433,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 28.12,
+     "lag": 4361,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 28.62,
+     "lag": 4300,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 29.12,
+     "lag": 4229,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 29.62,
+     "lag": 4135,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 30.12,
+     "lag": 4028,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 30.63,
+     "lag": 3960,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 31.13,
+     "lag": 3904,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 31.63,
+     "lag": 3845,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 32.13,
+     "lag": 3778,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 32.63,
+     "lag": 3715,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 33.14,
+     "lag": 3672,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 33.64,
+     "lag": 3633,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 34.14,
+     "lag": 3591,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 34.65,
+     "lag": 3546,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 35.15,
+     "lag": 3501,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 35.66,
+     "lag": 3451,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 36.16,
+     "lag": 3395,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 36.66,
+     "lag": 3331,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 37.16,
+     "lag": 3249,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 37.66,
+     "lag": 3171,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 38.16,
+     "lag": 3100,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 38.67,
+     "lag": 3024,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 39.17,
+     "lag": 2973,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 39.67,
+     "lag": 2926,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 40.18,
+     "lag": 2878,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 40.68,
+     "lag": 2831,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 41.18,
+     "lag": 2785,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 41.69,
+     "lag": 2719,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 42.19,
+     "lag": 2665,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 42.69,
+     "lag": 2598,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 43.2,
+     "lag": 2540,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 43.7,
+     "lag": 2465,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 44.2,
+     "lag": 2377,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 44.7,
+     "lag": 2304,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 45.21,
+     "lag": 2251,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 45.71,
+     "lag": 2179,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 46.21,
+     "lag": 2114,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 46.71,
+     "lag": 2068,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 47.22,
+     "lag": 2021,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 47.72,
+     "lag": 1965,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 48.22,
+     "lag": 1901,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 48.73,
+     "lag": 1830,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 49.23,
+     "lag": 1763,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 49.73,
+     "lag": 1696,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 50.23,
+     "lag": 1637,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 50.74,
+     "lag": 1573,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 51.24,
+     "lag": 1491,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 51.74,
+     "lag": 1403,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 52.24,
+     "lag": 1338,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 52.75,
+     "lag": 1293,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 53.25,
+     "lag": 1251,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 53.76,
+     "lag": 1209,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 54.26,
+     "lag": 1147,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 54.76,
+     "lag": 1101,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 55.27,
+     "lag": 1060,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 55.77,
+     "lag": 1018,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 56.27,
+     "lag": 975,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 56.78,
+     "lag": 936,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 57.28,
+     "lag": 883,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 57.78,
+     "lag": 824,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 58.28,
+     "lag": 755,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 58.79,
+     "lag": 710,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 59.29,
+     "lag": 664,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 59.79,
+     "lag": 616,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 60.29,
+     "lag": 542,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 60.79,
+     "lag": 475,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 61.3,
+     "lag": 403,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 61.8,
+     "lag": 339,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 62.3,
+     "lag": 271,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 62.8,
+     "lag": 209,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 63.3,
+     "lag": 134,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 63.81,
+     "lag": 65,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 64.31,
+     "lag": 65,
+     "pending": 104,
+     "lock_waits": 0
+    },
+    {
+     "t": 64.81,
+     "lag": 65,
+     "pending": 104,
+     "lock_waits": 0
+    }
+   ],
+   "records_replayed": 8465
+  },
+  "publish": {
+   "records": 8465,
+   "publish_s": 0.09,
+   "publish_rate_rps": 93668.6
+  }
+ },
+ "bench_process_max_rss_kb": 72276
+}

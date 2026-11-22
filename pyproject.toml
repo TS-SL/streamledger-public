@@ -1,0 +1,28 @@
+[project]
+name = "streamledger"
+version = "0.1.0"
+description = "Fault-tolerant commerce event processing with independent reconciliation"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = "-q -rs"
+markers = [
+  "integration: needs the compose stack (PostgreSQL/Kafka) running",
+  "recovery: crash, restart, rebalance and replay scenarios",
+  "stack_kill: kills and restarts compose services; needs STREAMLEDGER_ALLOW_STACK_KILL=1",
+  "spark: needs pyspark + Java 17",
+]
